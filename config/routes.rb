@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :games
-
+  resources :users
+  resources :chats
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,8 +9,14 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  get 'users' => 'users#index'
-  get 'users/:id' => 'users#show'
+  # get 'users' => 'users#index'
+  # get 'users/:id' => 'users#show'
+  # get 'users/new' => 'users#new'
+  # get 'users/:id/edit' => 'users#edit'
+  # post 'users' => 'users#create'
+  # patch 'users/:id' => 'users#update'
+  # put 'users/:id' => 'users#update'
+  # delete 'users/:id' => 'users#destroy'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
