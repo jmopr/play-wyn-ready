@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :email, uniqueness: { case_sensitive: false }, confirmation: true, format: { with: VALID_EMAIL_REGEX}
   validates :email, length: { maximum: 100 }
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
   # validates :terms_of_service, acceptance: true
   # validates :email_confirmation, presence: true
@@ -12,4 +12,7 @@ class User < ActiveRecord::Base
 
   has_many :user_games
   has_many :games, through: :user_games
+
+  geocoded_by :address
+  after_validation :geocode
 end

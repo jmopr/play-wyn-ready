@@ -11,18 +11,17 @@ class ChatsController < ApplicationController
 
   def edit
     @chat = Chat.find(params[:id])
-    Course.find(1).users << User.find(2)
-    parent.children << child
   end
 
   def new
-    if (params[:games_id])
-      game = Chat.find(params[:games_id])
-      @chat = Game.new
-    else
+    # if (params[:games_id])
+      # game = Game.find(params[:games_id])
+      @chat = Chat.new(params[:id])
+      byebug
+    # else
       # create new
-      @chat = Chat.new
-    end
+      # @chat = Chat.new
+    # end
     # respond_to do |format|
     # format.html # new.html.erb
   end

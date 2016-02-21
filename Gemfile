@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'faker'
 gem 'bcrypt'
 # Google maps for rails.
 gem 'gmaps4rails'

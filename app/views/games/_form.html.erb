@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <script>
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-  </script>
-
   <div class="field">
     <%= f.label :sport %><br>
     <%= f.text_field :sport %>

@@ -17,4 +17,15 @@ Game.create(sport: "Baseball") #, location: "Florida", time: "9:00PM")
 # Game.create(sport: "Softball", location: "Florida", time: "9:00PM")
 # Game.create(sport: "Tennis", location: "Florida", time: "9:00PM")
 
-User.create(name: "Michael Hart", email: "example@railstutorial.org", location: "Home", password: "foobar", password_confirmation: "foobar")
+User.create(name: "admin", email: "jmopr83@gmail.com", address: "7801 NE 4th Ct", password: "password", password_confirmation: "password", admin: true)
+
+50.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               address: "New York")
+end

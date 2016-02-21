@@ -1,3 +1,4 @@
+<h1>Games</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,16 +11,29 @@
 </p>
 
 <p>
-  <strong>Submit your Comment</strong>
-
-  <form method='post'>
-    <textarea name='comment' id='comment'></textarea><br/>
-    <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>'/>
-    <input type='submit' value='Submit'/>
-
-  </form>
-
+  <strong>Comments Section</strong><br>
+  <%= link_to 'Comments', new_chat_path(@game) %>
 </p>
+
+<% unless @chat.nil? %>
+<%= form_for(@chat) do |f| %>
+<div class="field">
+  <%= f.label :comment %><br>
+  <%= f.text_field :comment %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+<% end %>
+  <!-- <form method='post'> -->
+    <!-- <textarea name='comment' id='comment'></textarea><br/> -->
+    <!-- <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>'/> -->
+    <!-- <input type='submit' value='Submit'/> -->
+    <!-- </form> -->
+    <!-- <% @comment = Chat.new(comment: "", game_id: @game) %> -->
+
+
 
 <%= link_to 'Edit', edit_game_path(@game) %>
 <%= link_to 'Back', games_path %>
