@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
-  validates :sport, :location, :presence => true
+  validates :sport, :presence => true
   validates :sport, uniqueness: true
   validates :sport, length: { minimum: 2 }
 

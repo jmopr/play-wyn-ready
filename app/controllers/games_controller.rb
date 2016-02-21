@@ -31,10 +31,10 @@ class GamesController < ApplicationController
     respond_to do |format|
       if @game.save
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
-        format.json { render :show, status: :created, location: @game }
+        # format.json { render :show, status: :created, location: @game }
       else
         format.html { render :new }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
+        # format.json { render json: @game.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,10 +45,10 @@ class GamesController < ApplicationController
     respond_to do |format|
       if @game.update(game_params)
         format.html { redirect_to @game, notice: 'Game was successfully updated.' }
-        format.json { render :show, status: :ok, location: @game }
+        # format.json { render :show, status: :ok, location: @game }
       else
         format.html { render :edit }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
+        # format.json { render json: @game.errors, status: :unprocessable_entity }
       end
     end
   end
