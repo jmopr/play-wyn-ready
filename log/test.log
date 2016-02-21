@@ -1,0 +1,145 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "chats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "game_id" integer) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX "index_chats_on_game_id" ON "chats" ("game_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sport" varchar, "location" varchar, "time" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "user_games" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "game_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX "index_user_games_on_game_id" ON "user_games" ("game_id")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_games_on_game_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_games_on_game_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX "index_user_games_on_user_id" ON "user_games" ("user_id")
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar) [0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160221043341')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160219234328')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160219234511')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160219234636')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160220001116')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160220173908')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160220174830')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160220183046')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160220224502')
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160221042256')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160221043008')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "chats"
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "chats" ("comment", "created_at", "updated_at", "id") VALUES ('MyString', '2016-02-21 04:36:04', '2016-02-21 04:36:04', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "games"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:05', '2016-02-21 04:36:05', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "games" ("sport", "location", "time", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:05', '2016-02-21 04:36:05', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "user_games"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:05', '2016-02-21 04:36:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "user_games" ("game_id", "user_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, '2016-02-21 04:36:05', '2016-02-21 04:36:05', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:05', '2016-02-21 04:36:05', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "location", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2016-02-21 04:36:05', '2016-02-21 04:36:05', 298486374)[0m
+  [1m[35m (1.0ms)[0m  rollback transaction

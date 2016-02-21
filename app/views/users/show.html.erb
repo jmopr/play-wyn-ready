@@ -1,3 +1,9 @@
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -14,6 +20,8 @@
   <strong>Location:</strong>
   <%= @user.location %>
 </p>
+
+<!-- <%= @user.authenticate(@user.password) %> -->
 
 <%= link_to 'Edit', edit_user_path(@user) %>
 <%= link_to 'Back', users_path %>

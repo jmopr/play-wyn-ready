@@ -6,15 +6,25 @@ class ChatsController < ApplicationController
   end
 
   def show
-    @chat = Chat.find(params[:id])
+    # @chat = Chat.find(params[:id])
   end
 
   def edit
     @chat = Chat.find(params[:id])
+    Course.find(1).users << User.find(2)
+    parent.children << child
   end
 
   def new
-    @chat = Chat.new
+    if (params[:games_id])
+      game = Chat.find(params[:games_id])
+      @chat = Game.new
+    else
+      # create new
+      @chat = Chat.new
+    end
+    # respond_to do |format|
+    # format.html # new.html.erb
   end
 
   def create
@@ -54,6 +64,6 @@ class ChatsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def chat_params
-    params.require(:chat).permit(:name, :email, :location)
+    params.require(:chat).permit(:comment, :game_id)
   end
 end

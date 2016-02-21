@@ -1,11 +1,13 @@
 class User < ActiveRecord::Base
-  validates :name, :email, :location, :presence => true
+  before_save { email.downcase! }
+  validates :name, presence: true, length: { in: 3..30 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, uniqueness: { case_sensitive: false }, confirmation: true, format: { with: VALID_EMAIL_REGEX}
+  validates :email, length: { maximum: 100 }
+  validates :password, presence: true, length: { minimum: 6 }
+  has_secure_password
   # validates :terms_of_service, acceptance: true
-  validates :email, confirmation: true
   # validates :email_confirmation, presence: true
-  validates :email, uniqueness: true
-  validates :name, length: { minimum: 2 }
-  # validates :bio, length: { maximum: 500 }
   # validates :password, length: { in: 6..20 }
 
   has_many :user_games

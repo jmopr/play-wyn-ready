@@ -5,5 +5,10 @@
   <%= @chat.comment %>
 </p>
 
+<p>
+  <strong>GameID:</strong>
+  <%= @chat.game_id %>
+</p>
+
 <%= link_to 'Edit', edit_chat_path(@chat) %>
 <%= link_to 'Back', chats_path %>

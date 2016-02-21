@@ -11,18 +11,22 @@
     </div>
   <% end %>
 
+  <script>
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  </script>
+
   <div class="field">
     <%= f.label :sport %><br>
-    <%= f.text_area :sport %>
+    <%= f.text_field :sport %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_area :location %>
+    <%= f.text_field :location %>
   </div>
   </div>
   <div class="field">
     <%= f.label :time %><br>
-    <%= f.text_area :time %>
+    <%= f.text_field :time %>
   </div>
   <div class="actions">
     <%= f.submit %>

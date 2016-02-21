@@ -1,18 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Game:</strong>
-  <%= @game.sport %>
+  <strong><%= @game.sport %></strong>
 </p>
 
 <p>
-  <strong>Location:</strong>
-  <%= @game.location %>
+  <strong>See List of available players for <%= @game.sport.downcase %> in your area </strong><br>
+  <%= link_to 'Players', users_path %>
 </p>
 
 <p>
-  <strong>Time:</strong>
-  <%= @game.time %>
+  <strong>Submit your Comment</strong>
+
+  <form method='post'>
+    <textarea name='comment' id='comment'></textarea><br/>
+    <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>'/>
+    <input type='submit' value='Submit'/>
+
+  </form>
+
 </p>
 
 <%= link_to 'Edit', edit_game_path(@game) %>

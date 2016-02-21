@@ -1,4 +1,8 @@
 class Game < ActiveRecord::Base
+  validates :sport, :location, :presence => true
+  validates :sport, uniqueness: true
+  validates :sport, length: { minimum: 2 }
+
   has_many :user_games
   has_many :users, through: :user_games
   has_many :chats
