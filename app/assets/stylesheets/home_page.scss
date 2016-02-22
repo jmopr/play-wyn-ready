@@ -1,0 +1,235 @@
+// Place all the styles related to the HomePage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+
+  background-color: #CDC8B1;
+  color: black;
+  font-family: arial;
+}
+
+li {
+  display: inline;
+  padding: 1%;
+}
+
+#header {
+
+  background-color: grey;
+  position: relative;
+  z-index: 9999;
+}
+
+.header_links{
+
+  position: fixed;
+  width: 100%;
+  background-color: grey;
+  top: 0;
+  left: 0;
+
+}
+
+.user_field{
+
+  float: right;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+.pass_field{
+
+  padding-top: 0;
+  float: right;
+  padding-bottom: 0;
+
+
+}
+
+.sign_in{
+
+  float: right;
+
+}
+
+.title_head{
+  border-bottom: 2px solid grey;
+  padding-top: 2em;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 75px;
+}
+
+.intro{
+  text-align: center;
+}
+
+#about{
+  text-align: center;
+}
+
+.about_me{
+  width: 30%;
+  margin: 10% auto 1%;
+  border-bottom: 2px solid grey;
+  font-size: 45px;
+
+
+}
+
+.me{
+  width: 50%;
+  margin: 0 auto;
+  top: 0;
+
+}
+
+#sports {
+  text-align: center;
+}
+
+.title_sport {
+  width: 30%;
+  margin: 0 auto;
+  border-bottom: 2px solid grey;
+  font-size: 45px;
+  text-align: center;
+  padding-top: 5%;
+
+}
+
+.sport1 {
+  text-align: center;
+}
+
+#game{
+  display: inline;
+  position: relative;
+  width: 100%;
+}
+
+.sport_link{
+  text-align: center;
+  padding-top: 2%;
+}
+
+.sport_link2{
+  text-align: center;
+  padding-top: 1%;
+}
+
+.sport_link3{
+  text-align: center;
+  padding-top: 1%;
+}
+
+.sport_link4{
+  position: relative;
+  text-align: center;
+  padding-top: 3%;
+  left: -1%
+}
+
+.game_space{
+  float: left;
+  position: relative;
+  left: 0;
+
+}
+.game_space2{
+  float: left;
+  position: relative;
+  left: 15%;
+}
+
+.game_space3{
+  float: left;
+  position: relative;
+  left: 30.5%;
+}
+
+.game_space4{
+  float: left;
+  position: relative;
+  left: 45.5%
+}
+
+.game_space5{
+  float: left;
+  position: relative;
+  left: 0;
+}
+
+.game_space6{
+  float: left;
+  position: relative;
+  left: 15%
+}
+
+.game_space7{
+  float: left;
+  position: relative;
+  left: 30.5%
+}
+
+.game_space8{
+  float: left;
+  position: relative;
+  left: 45.5%
+}
+
+.game_space9{
+  float: left;
+  position: relative;
+  left: 13%
+}
+
+.game_space10{
+  float: left;
+  position: relative;
+  left: 29%;
+}
+
+.game_space11{
+  float: left;
+  position: relative;
+  left: 45%;
+}
+
+.game_space12{
+}
+
+.contact_info{
+  text-align: center;
+  border-bottom: 2px solid grey;
+  font-size: 45px;
+  margin: 4% auto;
+}
+
+.contacts{
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.icon{
+  height: 24px;
+}
+.sport_icon{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.sport_iconf{
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.clearfix{
+  clear: both;
+  content: "";
+  display: block;
+}

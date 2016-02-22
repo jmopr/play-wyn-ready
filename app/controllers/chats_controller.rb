@@ -17,7 +17,6 @@ class ChatsController < ApplicationController
     # if (params[:games_id])
       # game = Game.find(params[:games_id])
       @chat = Chat.new(params[:id])
-      byebug
     # else
       # create new
       # @chat = Chat.new
