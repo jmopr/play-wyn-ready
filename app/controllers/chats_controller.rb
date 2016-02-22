@@ -16,7 +16,11 @@ class ChatsController < ApplicationController
   def new
     # if (params[:games_id])
       # game = Game.find(params[:games_id])
+<<<<<<< HEAD
       # @chat = Chat.new(params[:game_id])
+=======
+      @chat = Chat.new(params[:id])
+>>>>>>> 2c62eb3e454e678e44441e352f7bc2e987323472
     # else
       # create new
       @chat = Chat.new
