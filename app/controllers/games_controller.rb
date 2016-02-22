@@ -10,7 +10,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-
+    @games = Game.where(@game.sport)
   end
 
   # GET /games/new

@@ -7,32 +7,43 @@
 
 <p>
   <strong>See List of available players for <%= @game.sport.downcase %> in your area </strong><br>
-  <%= link_to 'Players', users_path %>
+  <%= link_to 'Players', users_path(@game_id) %>
 </p>
+
 
 <p>
   <strong>Comments Section</strong><br>
-  <%= link_to 'Comments', new_chat_path(@game) %>
+  <%= link_to 'Comments', new_chat_path(@game_id) %>
 </p>
 
-<% unless @chat.nil? %>
-<%= form_for(@chat) do |f| %>
-<div class="field">
-  <%= f.label :comment %><br>
-  <%= f.text_field :comment %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% end %>
-<% end %>
-  <!-- <form method='post'> -->
-    <!-- <textarea name='comment' id='comment'></textarea><br/> -->
-    <!-- <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>'/> -->
-    <!-- <input type='submit' value='Submit'/> -->
-    <!-- </form> -->
-    <!-- <% @comment = Chat.new(comment: "", game_id: @game) %> -->
 
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center=
+    "+latlon+"&zoom=14&size=400x300&sensor=false";
+
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+    }
+
+    </script>
 
 
 <%= link_to 'Edit', edit_game_path(@game) %>

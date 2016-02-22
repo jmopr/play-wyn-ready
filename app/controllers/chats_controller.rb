@@ -16,11 +16,10 @@ class ChatsController < ApplicationController
   def new
     # if (params[:games_id])
       # game = Game.find(params[:games_id])
-      @chat = Chat.new(params[:id])
-      byebug
+      # @chat = Chat.new(params[:game_id])
     # else
       # create new
-      # @chat = Chat.new
+      @chat = Chat.new
     # end
     # respond_to do |format|
     # format.html # new.html.erb
@@ -28,7 +27,6 @@ class ChatsController < ApplicationController
 
   def create
     @chat = Chat.new(chat_params)
-
     respond_to do |format|
       if @chat.save
         format.html { redirect_to @chat, notice: 'chat was successfully created.' }
