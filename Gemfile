@@ -4,6 +4,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'faker'
 gem 'bcrypt'
+gem 'paperclip', '~> 4.2' #at the writing of this post
 # Google maps for rails.
 gem 'gmaps4rails'
 # Provides object geocoding.

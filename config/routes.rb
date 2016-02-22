@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root             'static_pages#home'
     # root 'users#index'
+  root 'posts#index'
   get '/' => 'home_page#show'
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   resources :games
   resources :users
   resources :chats
+  resources :posts
 
   # Example of regular route:
   # get 'users' => 'users#index'
