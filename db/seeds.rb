@@ -27,5 +27,5 @@ User.create(name: "admin", email: "jmopr83@gmail.com", address: "7801 NE 4th Ct"
                email: email,
                password:              password,
                password_confirmation: password,
-               address: "New York")
+               address: "Puerto Rico")
 end

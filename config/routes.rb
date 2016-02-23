@@ -3,12 +3,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
   # root             'static_pages#home'
-<<<<<<< HEAD
-  root 'static_pages#home'
-=======
+  # root 'static_pages#home'
     # root 'users#index'
-  get '/' => 'home_page#show'
->>>>>>> 2c62eb3e454e678e44441e352f7bc2e987323472
+  # get '/' => 'home_page#show'
+  root 'home_page#show'
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
@@ -17,10 +15,12 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  resources :games
+  resources :games do
+    resources :chats
+  end
+
   resources :users
   resources :chats
-
   # Example of regular route:
   # get 'users' => 'users#index'
   # get 'users/:id' => 'users#show'
