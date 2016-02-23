@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<h2>Play-Wyn-Ready<h2>
+<h2><%= link_to "Play-Wyn-Ready", root_path %><h2>
   <nav class="navbar navbar-default">
     <div class="navbar-container">
       <div class="navbar-header">
@@ -9,22 +9,22 @@
           <span class="icon-bar"></span>
         </button>
         <div class="navbar-brand">
-          <%= link_to "ActionGraph", posts_path %>
+          <%= link_to "New Post", new_post_path %>
         </div>
       </div>
       <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
         <ul class="nav_links">
           <li>
-            <%= link_to "New Post", new_post_path %>
-            |
-          </li>
-          <li>
             <%= link_to "Home", root_path %>
-            |
           </li>
+          |
           <li>
-            <%= link_to "Sign Up", signup_path %>
+            <%= link_to "Sports", games_path %>
           </li>
+          ____________
+          <!-- <li>
+            <%= link_to "Sign Up", signup_path %>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -37,11 +37,13 @@
           <!-- Put the users name here -->
         </div>
       </div>
+      <span class="img_head">Click Image to edit:</span>
       <div class="image center-block">
         <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
       </div>
       <p class="caption">
         <h3>Comments:</h3>
+        <textarea class="form-control" rows="3"></textarea>
         <p>
         <%= post.caption %>
       </p>
