@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   has_secure_password
 
-  has_many :users
   has_many :user_games
   has_many :games, through: :user_games
 

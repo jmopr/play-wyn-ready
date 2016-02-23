@@ -12,11 +12,12 @@
   <tbody>
     <% @chats.each do |chat| %>
       <tr>
+        <% if chat.game_id == params[:game_id].to_i %>
         <td><%= chat.comment %></td>
-        <td><%= chat.game_id %></td>
         <td><%= link_to 'Show', chat %></td>
         <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
         <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
