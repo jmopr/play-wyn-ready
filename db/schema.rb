@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160222183244) do
-=======
 ActiveRecord::Schema.define(version: 20160223011200) do
->>>>>>> 388e9f8820c1abb5d6cba8ac718d28623baa1291
 
   create_table "chats", force: :cascade do |t|
     t.string   "comment"

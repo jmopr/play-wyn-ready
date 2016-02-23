@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
 
-  background-color: #CDC8B1;
+  background-color:#a65959;
   color: black;
   font-family: arial;
 }
@@ -14,7 +14,7 @@ body{
 
 li {
   display: inline;
-  padding: 1%;
+  // padding-right: 1%;
 }
 
 #header {
@@ -31,9 +31,13 @@ li {
   border-width:5px;
   border-style: outset;
   border-color: green;
+  border-radius: 10px;
   top: 0;
   left: 0;
 
+}
+
+.link1{
 }
 
 
@@ -46,12 +50,10 @@ li {
 }
 
 .pass_field{
-
+  padding-right: 1%;
   padding-top: 0;
   float: right;
   padding-bottom: 0;
-
-
 }
 
 .sign_in{
@@ -62,7 +64,7 @@ li {
 
 .title_head{
   border-bottom: 2px solid grey;
-  padding-top: 2em;
+  padding-top: 3em;
   text-align: center;
   width: 50%;
   margin: 0 auto;
@@ -79,10 +81,9 @@ li {
 
 .about_me{
   width: 30%;
-  margin: 10% auto 1%;
+  margin: 5% auto;
   border-bottom: 2px solid grey;
   font-size: 45px;
-
 
 }
 
@@ -138,8 +139,7 @@ li {
   // position: relative;
   text-align: center;
   padding-top: 3%;
-  left: -1%
-}
+  margin-left: -3%;}
 
 .game_space{
   float: left;

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta charset="utf-8">
+
   <title>Play-Wyn-Ready</title>
-  <link rel="stylesheet" href="home_page.css" type="text/css"/>
   <!-- Latest compiled and minified CSS -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 </head>
@@ -13,29 +8,26 @@
   <div id="header" style="display: block;">
     <nav class="header_links">
       <ul>
-        <li>
-          <a href="#title">Home</a>
+        <li class ="link1">
+          <a href="#title"class="btn btn-success btn-sm active" role="button">Home</a>
         </li>
         <li>
-          <a href="games">Sports</a>
+          <a href="games"class="btn btn-success btn-sm active" role="button">Sports</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="posts"class="btn btn-success btn-sm active" role="button">Post Image</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#about"class="btn btn-success btn-sm active" role="button">About</a>
         </li>
-<<<<<<< HEAD
         <li>
-          <a href="posts">Post Image</a>
+          <a href="#contact"class="btn btn-success btn-sm active" role="button">Contact</a>
         </li>
-        <li class="sign_in">
+        <!-- <li class="sign_in">
           <form action="login">
             <input type="submit" value="Log in">
           </form>
-        </li>
-=======
->>>>>>> 388e9f8820c1abb5d6cba8ac718d28623baa1291
+        </li> -->
         <li class="pass_field">
           <%= form_for(:session, url: login_path) do |f| %>
 
@@ -47,14 +39,16 @@
 
           <%= f.submit "Log in", class: "btn btn-primary" %>
 
+          <span>  <%=   link_to "Sign up", signup_path %> </span>
+
           <% end %>
         </li>
 
-        <li class="pass_field">
+        <!-- <li class="pass_field">
           <form action="users/new">
             <input type="submit" value="Sign up" >
           </form>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </div>
@@ -223,10 +217,10 @@
       <div id="contact_link">
         <nav class="contacts">
           <ul>
-            <li>
+            <!-- <li>
               <img src="https://pbs.twimg.com/profile_images/614583061448036352/CBpFkPaz.png" alt="linkedin icon" class="icon"/>
               <a href="" target="_blank"></a>
-            </li>
+            </li> -->
             <li>
               <img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300" alt="gmail icon" class="icon"/>
               <a href="" target="_blank"></a>
@@ -235,15 +229,12 @@
               <img src="http://memeburn.com/wp-content/uploads/2012/07/Twitter-logo-blue-on-grey1.jpg" alt="Twitter icon" class="icon"/>
               <a href="" target="_blank"></a>
             </li>
-            <li>
+            <!-- <li>
               <img src="https://www.thoughtworks.com/imgs/icons/social/github.png" alt="git hub icon" class="icon"/>
               <a href="" target="_blank"></a>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>
     </div>
   </div>
-  </body>
-
-  </html>

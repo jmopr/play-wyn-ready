@@ -1,5 +1,5 @@
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<h2><%= link_to "Play-Wyn-Ready", root_path %><h2>
+<h2 class="post_header"><%= link_to "Play-Wyn-Ready", root_path %><h2>
+  <div id="posts_page">
   <nav class="navbar navbar-default">
     <div class="navbar-container">
       <div class="navbar-header">
@@ -21,7 +21,6 @@
           <li>
             <%= link_to "Sports", games_path %>
           </li>
-          ____________
           <!-- <li>
             <%= link_to "Sign Up", signup_path %>
           </li> -->
@@ -41,16 +40,17 @@
       <div class="image center-block">
         <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
       </div>
+      <p class="post_caption">
+        <%= post.caption %>
+      </p>
       <p class="caption">
         <h3>Comments:</h3>
         <textarea class="form-control" rows="3"></textarea>
-        <p>
-        <%= post.caption %>
-      </p>
       </p>
     </div>
     <% end %>
   </div>
+</div>
 
 
 

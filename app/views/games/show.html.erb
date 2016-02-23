@@ -10,15 +10,15 @@
 <p>
   <strong>Comments Section</strong><br>
   <%= link_to 'Comments', game_chats_path(@game.id) %>
+  |
   <%= link_to 'New Comments', new_game_chat_path(@game.id) %>
 </p>
 
-<%= link_to 'Back', games_path %>
 
 
 <p id="demo">Click the button to get your position.</p>
 
-<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">Your Current Location</button>
 
 <div id="mapholder"></div>
 
@@ -58,3 +58,5 @@ function showError(error) {
     }
 }
 </script>
+
+<%= link_to 'Back', games_path %>
