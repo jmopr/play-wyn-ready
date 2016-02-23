@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'hirb'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'faker'

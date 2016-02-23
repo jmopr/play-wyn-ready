@@ -25,6 +25,7 @@
         <li>
           <a href="#contact">Contact</a>
         </li>
+<<<<<<< HEAD
         <li>
           <a href="posts">Post Image</a>
         </li>
@@ -33,21 +34,25 @@
             <input type="submit" value="Log in">
           </form>
         </li>
+=======
+>>>>>>> 388e9f8820c1abb5d6cba8ac718d28623baa1291
         <li class="pass_field">
-          <form action="action_page.php">
-            Password:<br>
-            <input type="password" name="lastname" value=""><br><br>
-          </form>
+          <%= form_for(:session, url: login_path) do |f| %>
+
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+
+          <%= f.submit "Log in", class: "btn btn-primary" %>
+
+          <% end %>
         </li>
-        <li class="user_field">
-          <form action="action_page.php">
-            User name:<br>
-            <input type="text" name="firstname" value=""><br>
-          </form>
-        </li>
-        <li class="sign_in">
+
+        <li class="pass_field">
           <form action="users/new">
-            <input type="submit" value="Sign up">
+            <input type="submit" value="Sign up" >
           </form>
         </li>
       </ul>

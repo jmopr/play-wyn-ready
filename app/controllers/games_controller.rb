@@ -10,11 +10,13 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-    @games = Game.find(params[:id])
-    @hash = Gmaps4rails.build_markers(@games) do |game, marker|
+    # @games = Game.where(@game.sport)
+    @games = Game.find(params[:id]) 
+
+    # @hash = Gmaps4rails.build_markers(@games) do |game, marker|
       # marker.lat game.latitude
       # marker.lng game.longitude
-    end
+    # end
   end
 
   # GET /games/new
