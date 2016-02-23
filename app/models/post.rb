@@ -1,5 +1,4 @@
 class Post < ActiveRecord::Base
-  has_attached_file :image
   validates :image, presence: true
 
   has_attached_file :image, styles: { :medium => "640x" }
