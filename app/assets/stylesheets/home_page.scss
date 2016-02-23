@@ -8,15 +8,18 @@ body{
   font-family: arial;
 }
 
+.container{
+  width:auto;
+}
+
 li {
   display: inline;
   padding: 1%;
 }
 
 #header {
-
-  background-color: grey;
-  position: relative;
+  // background-color: grey;
+  // position: relative;
   z-index: 9999;
 }
 
@@ -24,11 +27,15 @@ li {
 
   position: fixed;
   width: 100%;
-  background-color: grey;
+  background-color: orange;
+  border-width:5px;
+  border-style: outset;
+  border-color: green;
   top: 0;
   left: 0;
 
 }
+
 
 .user_field{
 
@@ -57,9 +64,9 @@ li {
   border-bottom: 2px solid grey;
   padding-top: 2em;
   text-align: center;
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
-  font-size: 75px;
+  font-size: 65px;
 }
 
 .intro{
@@ -105,12 +112,14 @@ li {
 }
 
 #game{
-  display: inline;
-  position: relative;
-  width: 100%;
+  // display: inline;
+  // position: relative;
+  width: auto;;
 }
 
 .sport_link{
+  // display: inline;
+  // align-content: center;
   text-align: center;
   padding-top: 2%;
 }
@@ -126,7 +135,7 @@ li {
 }
 
 .sport_link4{
-  position: relative;
+  // position: relative;
   text-align: center;
   padding-top: 3%;
   left: -1%
@@ -134,67 +143,67 @@ li {
 
 .game_space{
   float: left;
-  position: relative;
+  // position: relative;
   left: 0;
 
 }
 .game_space2{
-  float: left;
-  position: relative;
-  left: 15%;
+  float:left;
+  // position: relative;
+  // left: 15%;
 }
 
 .game_space3{
-  float: left;
-  position: relative;
+  float: right;
+  // position: relative;
   left: 30.5%;
 }
 
 .game_space4{
-  float: left;
-  position: relative;
+  float: right;
+  // position: relative;
   left: 45.5%
 }
 
 .game_space5{
   float: left;
-  position: relative;
+  // position: relative;
   left: 0;
 }
 
 .game_space6{
   float: left;
-  position: relative;
+  // position: relative;
   left: 15%
 }
 
 .game_space7{
   float: left;
-  position: relative;
+  // position: relative;
   left: 30.5%
 }
 
 .game_space8{
   float: left;
-  position: relative;
+  // position: relative;
   left: 45.5%
 }
 
 .game_space9{
   float: left;
-  position: relative;
+  // position: relative;
   left: 13%
 }
 
 .game_space10{
   float: left;
-  position: relative;
+  // position: relative;
   left: 29%;
 }
 
 .game_space11{
   float: left;
-  position: relative;
+  // position: relative;
   left: 45%;
 }
 
@@ -226,6 +235,12 @@ li {
   height: 150px;
   width: 200px;
   border-radius: 50%;
+}
+
+.logo_icon{
+  padding-top: 2%;
+  margin: auto 35%;
+  height: 300px;
 }
 
 .clearfix{
