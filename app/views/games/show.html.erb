@@ -20,6 +20,9 @@
   <strong> <%= @game.time %>  </strong><br>
 </p>
 <p class="chats">
+  <%= link_to "Post Image", posts_path %>
+</p>
+<p class="chats">
   <strong>Comments Section</strong><br>
   <%= link_to 'Comments', game_chats_path(@game.id) %>
   |

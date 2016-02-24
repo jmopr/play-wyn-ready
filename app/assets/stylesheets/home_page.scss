@@ -76,7 +76,7 @@ li {
 
 
 .title_head{
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid yellow;
   padding-top: 3em;
   text-align: center;
   width: 50%;
@@ -105,7 +105,7 @@ li {
 .about_me{
   width: 30%;
   margin: 5% auto;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid yellow;
   font-size: 45px;
   color: black;
   text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
@@ -130,7 +130,7 @@ li {
 .title_sport {
   width: 30%;
   margin: 0 auto;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid yellow;
   font-size: 45px;
   text-align: center;
   padding-top: 5%;
@@ -142,6 +142,11 @@ li {
 .sport1 {
   text-align: center;
   padding-top: 1%;
+  color: black;
+  text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+  font-size: 20px;
+}
+.sport1 a{
   color: black;
   text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
   font-size: 20px;
@@ -289,7 +294,7 @@ li {
 
 .contact_info{
   text-align: center;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid yellow;
   font-size: 45px;
   margin: 4% auto;
   color: black;
