@@ -34,7 +34,7 @@ class ChatsController < ApplicationController
     @chat.game_id = @game.id
     respond_to do |format|
       if @chat.save
-        format.html { redirect_to @chat, notice: 'chat was successfully created.' }
+        format.html { redirect_to game_chats_url(@game.id), notice: 'chat was successfully created.' }
       else
         format.html { render :new }
       end
