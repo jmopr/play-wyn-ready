@@ -11,6 +11,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 
 
@@ -33,7 +34,7 @@ li {
 
   position: fixed;
   width: 100%;
-  background-color: #A5E6DE;
+  background-color: grey;
   border-width:5px;
   border-style: outset;
   border-color: green;
@@ -44,6 +45,7 @@ li {
 }
 
 .link1{
+
 }
 
 
@@ -67,6 +69,12 @@ li {
   float: right;
 
 }
+
+.sign_up a {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 
 .title_head{
   border-bottom: 2px solid grey;
@@ -121,7 +129,7 @@ li {
 #game{
   // display: inline;
   // position: relative;
-  width: auto;;
+  width: auto;
 }
 
 .sport_link{
@@ -131,9 +139,20 @@ li {
   padding-top: 2%;
 }
 
+.sport_link a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
 .sport_link2{
   text-align: center;
   padding-top: 1%;
+}
+
+.sport_link2 a{
+
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
 }
 
 .sport_link3{
@@ -141,76 +160,110 @@ li {
   padding-top: 1%;
 }
 
+.sport_link3 a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
 .sport_link4{
   // position: relative;
   text-align: center;
   padding-top: 3%;
-  margin-left: -2.5%;}
+  margin-left: 0;
+}
+
+
+  .sport_link4 a{
+    color: white;
+    text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+  }
+
 
 .game_space{
   float: left;
+  margin-left: auto;
+  margin-right: auto;
+  // border: 2px solid grey;
+  // border-radius: 200px;
+  // background-color: orange;
+  // float: left;
   // position: relative;
-  left: 0;
-
+  // left: 0;
 }
+
 .game_space2{
   float:left;
+  margin-left: 13%;
   // position: relative;
   // left: 15%;
 }
 
 .game_space3{
   float: right;
+  margin-left: auto;
+  margin-right: auto;
   // position: relative;
-  left: 30.5%;
+  // left: 30.5%;
 }
 
 .game_space4{
   float: right;
+  margin-right: 13%;
   // position: relative;
-  left: 45.5%
+  // left: 45.5%
 }
 
 .game_space5{
   float: left;
+  margin-left: auto;
+  margin-right: auto;
   // position: relative;
-  left: 0;
+  // left: 0;
 }
 
 .game_space6{
   float: left;
+  margin-left: 13%;
   // position: relative;
-  left: 15%
+  // left: 15%
 }
 
 .game_space7{
-  float: left;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
   // position: relative;
-  left: 30.5%
+  // left: 30.5%
 }
 
 .game_space8{
-  float: left;
+  float: right;
+  margin-right: 13%;
   // position: relative;
-  left: 45.5%
+  // left: 45.5%
 }
 
 .game_space9{
   float: left;
+  margin-left: 13%;
+  // margin-right: auto;
   // position: relative;
-  left: 13%
+  // left: 13%
 }
 
 .game_space10{
   float: left;
+  margin-left: 16%;
+  // margin-right: auto;
   // position: relative;
-  left: 29%;
+  // left: 29%;
 }
 
 .game_space11{
   float: left;
+  margin-left: 15%;
   // position: relative;
-  left: 45%;
+  // left: 45%;
 }
 
 .game_space12{

@@ -1,3 +1,136 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.content{
+  width: auto ;
+  // background: url(http://cdn.laxallstars.com/wp-content/uploads/2014/05/TWG_1631-810x539.jpg) no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}
+
+.table table-bordered{
+
+}
+
+.table_h{
+  background-color: #00bfff;
+}
+
+.table_b{
+  background-color: grey;
+}
+
+.table_b a{
+
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.game_head {
+  color: #067364;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-style: italic;
+  text-align: center;
+
+}
+
+.game_info{
+  font-size: 20px;
+  color: black;
+  text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+}
+
+.dis{
+  text-align: center;
+  // padding-top: ;
+  border-style: inset;
+  border: 2px solid black;
+  background-color: grey;
+  border-radius: 10px;
+  border-width: medium;
+  box-sizing: border-box;
+  width: 30%;
+  margin-left: auto;
+  margin-right: 36%;
+
+
+}
+
+.text_dis{
+  padding-left: 35%;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.address{
+  padding-left: 35%;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.time{
+  padding-left: 35%;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.name{
+  padding-left: 35%;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.map{
+  padding-left: 23%;
+
+}
+
+.map_content{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.chats{
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding-left: 35%;
+}
+
+.chats a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
+.player_list{
+  padding-left: 23%;
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.player_list a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
+.bottom_links {
+  text-align: center;
+
+}
+
+.bottom_links a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+
+}
+
+.bottom_l a{
+  color: white;
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+
+}

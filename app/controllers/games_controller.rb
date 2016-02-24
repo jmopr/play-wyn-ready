@@ -11,12 +11,13 @@ class GamesController < ApplicationController
   # GET /games/1.json
   def show
     # @games = Game.where(@game.sport)
-    @games = Game.find(params[:id]) 
+    @games = Game.find(params[:id])
 
-    # @hash = Gmaps4rails.build_markers(@games) do |game, marker|
-      # marker.lat game.latitude
-      # marker.lng game.longitude
-    # end
+
+    @hash = Gmaps4rails.build_markers(@games) do |game, marker|
+      marker.lat game.latitude
+      marker.lng game.longitude
+    end
   end
 
   # GET /games/new
@@ -77,6 +78,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:sport, :location, :time)
+      params.require(:game).permit(:sport, :description, :address, :time)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223011200) do
+ActiveRecord::Schema.define(version: 20160224015321) do
 
   create_table "chats", force: :cascade do |t|
     t.string   "comment"
@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(version: 20160223011200) do
   create_table "games", force: :cascade do |t|
     t.string   "sport"
     t.string   "address"
-    t.string   "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "description"
   end
 
   create_table "posts", force: :cascade do |t|

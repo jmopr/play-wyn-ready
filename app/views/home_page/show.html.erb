@@ -34,12 +34,13 @@
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
 
+
           <%= f.label :password %>
           <%= f.password_field :password, class: 'form-control' %>
 
           <%= f.submit "Log in", class: "btn btn-primary" %>
 
-          <span>  <%=   link_to "Sign up", signup_path %> </span>
+          <span class="sign_up">  <%=   link_to "Sign up", signup_path %> </span>
 
           <% end %>
         </li>
