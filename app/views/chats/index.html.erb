@@ -4,7 +4,7 @@
   <thead class="table_h">
     <tr>
       <th>Comment</th>
-      <th>GameId</th>
+      <th>Game</th>
     </tr>
   </thead>
 
@@ -13,7 +13,7 @@
       <tr>
         <% if chat.game_id == params[:game_id].to_i %>
         <td><%= chat.comment %></td>
-        <td><%= chat.game_id %></td>
+        <td><%= chat.game.sport %></td>
         <% end %>
       </tr>
     <% end %>
