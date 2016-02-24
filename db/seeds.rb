@@ -5,10 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Game.create(sport: "Basketball", description: "3v3 Pick up")#, location: "Florida", time: "9:00PM")
-Game.create(sport: "Baseball", description: "Need 4 for a game") #, location: "Florida", time: "9:00PM")
-Game.create(sport: "Soccer", description: "Trying to organize a full field game")#, location: "Florida", time: "9:00PM")
-Game.create(sport: "Football", description: "Flag football need 6")#, location: "Florida", time: "9:00PM")
+Game.create(sport: "Basketball", description: "3v3 Pick up", address: "Florida", time: "9:00PM")
+Game.create(sport: "Baseball", description: "Need 4 for a game", address: "California", time: "9:00PM")
+Game.create(sport: "Soccer", description: "Trying to organize a full field game", address: "Atlanta", time: "9:00PM")
+Game.create(sport: "Football", description: "Flag football need 6", address: "Cleveland", time: "9:00PM")
 Game.create(sport: "Lacrosse", description: "5 on 5 box. Need subs ")#, location: "Florida", time: "9:00PM")
 Game.create(sport: "Hockey", description: "Nedd subs for roller")#, location: "Florida", time: "9:00PM")
 Game.create(sport: "Beach Volleyball", description: "Looking to start a game hmu")#, location: "Florida", time: "9:00PM")
@@ -17,9 +17,11 @@ Game.create(sport: "Golf", description: "Looking for 4th")#, location: "Florida"
 Game.create(sport: "Softball", description: "Need players")#, location: "Florida", time: "9:00PM")
 Game.create(sport: "Tennis", description: "Anyone want to play")#, location: "Florida", time: "9:00PM")
 
-User.create(name: "admin", email: "jmopr83@gmail.com", address: "7801 NE 4th Ct", password: "password", password_confirmation: "password", admin: true)
+User.create(name: "Juan Ortiz", email: "jmopr83@gmail.com", address: "7801 NE 4th Ct", password: "password", password_confirmation: "password", admin: true)
 
-50.times do |n|
+
+
+25.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
@@ -29,3 +31,8 @@ User.create(name: "admin", email: "jmopr83@gmail.com", address: "7801 NE 4th Ct"
                password_confirmation: password,
                address: "Puerto Rico")
 end
+
+
+Chat.create(comment: "Today's game was great.")
+Chat.create(comment: "Did you guys see the top plays today?")
+Chat.create(comment: "You guys were amazing!!!.")
