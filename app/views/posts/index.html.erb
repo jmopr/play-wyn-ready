@@ -36,6 +36,9 @@
           <!-- Put the users name here -->
         </div>
       </div>
+      <p class="created">Posted:
+        <%= time_ago_in_words(post.created_at) %> 
+      </p>
       <span class="img_head">Click Image to edit:</span>
       <div class="image center-block">
         <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
