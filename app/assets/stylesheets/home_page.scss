@@ -3,10 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
 
-  background-color:#a65959;
+  // background-color:#a65959;
   color: black;
   font-family: arial;
+  background: url(http://www.stanleypark.org/sites/stanleypark.org/files/imagecache/huge/photo/2011/04/img_3064.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 .container{
   width:auto;
@@ -27,7 +33,7 @@ li {
 
   position: fixed;
   width: 100%;
-  background-color: orange;
+  background-color: #A5E6DE;
   border-width:5px;
   border-style: outset;
   border-color: green;
@@ -139,7 +145,7 @@ li {
   // position: relative;
   text-align: center;
   padding-top: 3%;
-  margin-left: -3%;}
+  margin-left: -2.5%;}
 
 .game_space{
   float: left;
