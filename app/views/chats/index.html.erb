@@ -1,22 +1,19 @@
 <h1>Chat</h1>
 
 <table class="table table-bordered">
-  <thead>
+  <thead class="table_h">
     <tr>
       <th>Comment</th>
-      <th>GameId</th>
-      <th colspan="3"></th>
+      <th>Game</th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table_b">
     <% @chats.each do |chat| %>
       <tr>
         <% if chat.game_id == params[:game_id].to_i %>
         <td><%= chat.comment %></td>
-        <td><%= link_to 'Show', chat %></td>
-        <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
-        <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= chat.game.sport %></td>
         <% end %>
       </tr>
     <% end %>
@@ -25,5 +22,6 @@
 
 <br>
 
-<%= link_to 'New chat', new_chat_path %>
+<%= link_to 'New chat', new_game_chat_path %>
+|
 <%= link_to 'Back to Games', games_path %>

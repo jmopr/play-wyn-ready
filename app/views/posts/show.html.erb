@@ -38,9 +38,11 @@
       <%= @post.caption %>
     </p>
     <div class="text-center">
+      <div>
       <%= link_to "Edit Post", edit_post_path(@post) %>
       |
-      <%= link_to "cancel", posts_path %>
+      <%= link_to "Cancel", posts_path %>
+    </div>
     </div>
   </div>
 </div>
